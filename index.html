@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndusConnect - Comunicação Industrial Acessível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">🏭 IndusConnect</div>
+    <div class="accessibility-controls">
+        <button id="toggle-contrast">🌓 Alto Contraste</button>
+        <button id="tts-welcome">🔊 Ouvir Página</button>
+    </div>
+</header>
+
+<nav class="menu">
+    <button class="menu-btn active" data-target="sobre">Sobre o Projeto</button>
+    <button class="menu-btn" data-target="comunicado">Novo Comunicado Digital</button>
+    <button class="menu-btn" data-target="mural">Mural Digital Zero Papel</button>
+</nav>
+
+<div id="page-sobre" class="tab-content active-page">
+    <section id="sobre" class="hero-section">
+        <div class="cover-wrapper">
+            <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1200" alt="Indústria Sustentável">
+            <div class="cover-overlay">
+                <h2 class="cover-slogan">Criar uma solução digital simples que ajude a indústria a se comunicar melhor, promovendo acessibilidade, inclusão e sustentabilidade.</h2>
+            </div>
+        </div>
+
+        <h1>🏭 IndusConnect</h1>
+        <h2>Tecnologia para uma comunicação acessível, sustentável e eficiente.</h2>
+        
+        <div class="project-description">
+            <h3>💡 O Conceito: IndusConnect</h3>
+            <p>Uma plataforma web (dashboard/mural digital) voltada para o chão de fábrica e escritórios industriais. Ela resolve três problemas de uma vez:</p>
+            
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h4>👁️ Acessibilidade & Inclusão</h4>
+                    <p>Possui conversão de texto em áudio (para colaboradores com baixa visão ou dificuldades de leitura) e ajuste de contraste.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>🌱 Sustentabilidade</h4>
+                    <p>Substitui os antigos murais de papel e panfletos físicos por avisos digitais em tempo real, reduzindo o desperdício.</p>
+                </div>
+                <div class="concept-card">
+                    <h4>⚡ Comunicação Eficiente</h4>
+                    <p>Um canal centralizado para avisos de segurança (EPIs), treinamentos e metas da empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="eco-counter">
+        <h2>🌱 Impacto Sustentável</h2>
+        <h3>250 folhas de papel economizadas</h3>
+        <p>Utilizando o mural digital, comunicados impressos deixam de ser necessários.</p>
+    </section>
+</div>
+
+<div id="page-comunicado" class="tab-content">
+    <section id="comunicado" class="announcement-form">
+        <h2>📢 Novo Comunicado Digital</h2>
+        <form id="post-form">
+            <div class="form-group">
+                <label>Título do Aviso</label>
+                <input type="text" id="title" placeholder="Digite o título do comunicado..." required>
+            </div>
+            <div class="form-group">
+                <label>Conteúdo</label>
+                <textarea id="content" rows="5" placeholder="Escreva os detalhes da mensagem aqui..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Categoria</label>
+                <select id="category">
+                    <option value="⚠️ Segurança">⚠️ Segurança</option>
+                    <option value="🌱 Sustentabilidade">🌱 Sustentabilidade</option>
+                    <option value="ℹ️ Geral">ℹ️ Geral</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-submit">Publicar no Mural Digital</button>
+        </form>
+    </section>
+</div>
+
+<div id="page-mural" class="tab-content">
+    <section id="mural" class="feed-section">
+        <h2>📋 Mural Digital Zero Papel</h2>
+        <div class="search-filters">
+            <input type="text" id="search-input" placeholder="🔍 Buscar comunicado por texto...">
+            <div class="category-buttons">
+                <button class="btn-filter active" data-filter="all">Todos</button>
+                <button class="btn-filter" data-filter="⚠️ Segurança">Segurança</button>
+                <button class="btn-filter" data-filter="🌱 Sustentabilidade">Sustentabilidade</button>
+                <button class="btn-filter" data-filter="ℹ️ Geral">Geral</button>
+            </div>
+        </div>
+        <div id="announcements-feed"></div>
+    </section>
+</div>
+
+<footer>
+    <p>IndusConnect © 2026<br>Conectando pessoas, reduzindo papel e construindo uma indústria mais inclusiva.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
